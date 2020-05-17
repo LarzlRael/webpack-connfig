@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx webpack-dev-server",
-    "build":"npx webpack -p"
+    "build": "npx webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,9 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2"
   }
 }

@@ -1,2 +1,2 @@
 import "../scss/styles.scss";
-//?Here go you js code
+//?Here go you ts code
