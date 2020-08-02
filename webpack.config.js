@@ -5,10 +5,15 @@ module.exports = {
     entry: './src/ts/app.ts',
     devtool: 'inline-source-map',
     devServer: {
-        port: 5500
+        port: 5500,
+        open: true
     },
     module: {
         rules: [
+            {
+                test: /\.handlebars$/,
+                loader: 'handlebars-loader'
+            },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
@@ -28,7 +33,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'static/',
+                            outputPath: 'images/',
                             useRelativePath: true
                         }
                     },
@@ -62,7 +67,15 @@ module.exports = {
     },
     plugins: [
         new htmlPlugin({
-            template: './src/index.html'
+            template: './src/index.handlebars',
+            minify: {
+                
+                html5: true,
+                collapseWhitespace: true,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true
+            }
         }),
         new mini_css_extract_plugin({
             filename: 'bundle.css'

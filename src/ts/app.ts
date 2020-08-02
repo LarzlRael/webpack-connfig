@@ -1,6 +1,6 @@
 import "../scss/styles.scss";
 //?Here go you ts code
-//* import '../static/image.jpg';
+//* import '../images/image.jpg';
 //* import 'image.jpg';
 
 
