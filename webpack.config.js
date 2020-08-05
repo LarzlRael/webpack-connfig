@@ -74,7 +74,8 @@ module.exports = {
                 collapseWhitespace: true,
                 caseSensitive: true,
                 removeComments: true,
-                removeEmptyElements: true
+                //Esto causa problemas con font awesome
+                //removeEmptyElements: true
             }
         }),
         new mini_css_extract_plugin({
@@ -82,7 +83,7 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js','.svg'],
     },
     output: {
         path: __dirname + '/build',

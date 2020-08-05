@@ -21,3 +21,15 @@ $breakpoint-lg: 1024PX;
         }
     }
 }
+
+//? poara poder usar se usa asi
+// * Variables para  usar 
+//? sm = 320px
+//? md = 768PX
+//? lg = 1024PX
+
+//? dentro de otros archivos
+
+// @include media(sm) {
+//      codigo para poner
+// }
